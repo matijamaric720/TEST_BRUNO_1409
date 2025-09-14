@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
@@ -22,6 +21,9 @@ export const metadata = {
   description:
     "Bone Travel Services",
 };
+
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>

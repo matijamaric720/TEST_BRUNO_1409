@@ -14,7 +14,7 @@ checkFields<Diff<{
   config?: {}
   generateStaticParams?: Function
   revalidate?: RevalidateRange<TEntry> | false
-  dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
+  // dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static'
   dynamicParams?: boolean
   fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
   preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
