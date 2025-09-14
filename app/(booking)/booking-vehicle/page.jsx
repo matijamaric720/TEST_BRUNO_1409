@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import BookingTab from "@/components/booking/BookingTab";
 import BookingVehicles from "@/components/booking/BookingVehicles";
 import Footer1 from "@/components/footers/Footer1";
