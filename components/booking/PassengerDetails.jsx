@@ -6,7 +6,7 @@ import DatePickerComponent from "@/components/common/DatePicker";
 import PlacePicker from "@/components/common/PlacePicker";
 import TimePickerComponent from "@/components/common/TimePicker";
 import PlaceFinderBlank from "@/components/common/PlaceFinderBlank";
-import MyPOSEmbeddedCheckout from "@/components/booking/MyPOSEmbeddedCheckout";
+// import MyPOSEmbeddedCheckout from "@/components/booking/MyPOSEmbeddedCheckout";
 
 export default function PassengerDetails() {
   const router = useRouter();
