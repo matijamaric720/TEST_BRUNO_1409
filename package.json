@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "mypos-embedded-checkout": "^1.4.4",
-    "next": "^15.5.3",
+    "next": "^14.2.15",
     "react": "^18.3.1",
     "react-countdown": "^2.3.5",
     "react-dom": "^18.3.1",
@@ -25,6 +25,6 @@
     "yarn": "^1.22.22"
   },
   "engines": {
-  "node": "18.x"
-}
+    "node": "18.x"
+  }
 }
