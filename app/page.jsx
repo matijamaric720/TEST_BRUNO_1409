@@ -1,43 +1,32 @@
-import dynamic from 'next/dynamic';
-import { unstable_noStore as noStore } from 'next/cache';
-
-// Static imports (safe for SSR)
 import Footer1 from "@/components/footers/Footer1";
 import Header9 from "@/components/headers/Header9";
+import Blogs from "@/components/homes/common/blogs/Blogs";
+import Cta from "@/components/homes/common/cta/Cta";
+import Facts from "@/components/homes/home-10/Facts";
+import Features from "@/components/homes/home-10/Features";
+import Features2 from "@/components/homes/home-10/Features2";
+import Feet from "@/components/homes/home-10/Feet";
+import Hero from "@/components/homes/home-10/Hero";
+import Partners from "@/components/homes/home-10/Partners";
+import Process from "@/components/homes/home-10/Process";
+import Services from "@/components/homes/home-10/Services";
+import Testimonials from "@/components/common/testimonials/Testimonials";
 import MobailHeader1 from "@/components/headers/MobailHeader1";
-
-// Dynamic imports for components that might use browser APIs
-const Hero = dynamic(() => import("@/components/homes/home-10/Hero"), {
-  ssr: false,
-  loading: () => <div className="min-h-screen flex items-center justify-center">Loading...</div>
-});
-
-const Features = dynamic(() => import("@/components/homes/home-10/Features"), { ssr: false });
-const Feet = dynamic(() => import("@/components/homes/home-10/Feet"), { ssr: false });
-const Process = dynamic(() => import("@/components/homes/home-10/Process"), { ssr: false });
-const Services = dynamic(() => import("@/components/homes/home-10/Services"), { ssr: false });
-const Features2 = dynamic(() => import("@/components/homes/home-10/Features2"), { ssr: false });
-
-const GoogleMapsScript = dynamic(() => import("@/components/GoogleMapsScript").then(mod => ({ default: mod.GoogleMapsScript })), { 
-  ssr: false 
-});
+import Script from "next/script";
 
 export const metadata = {
   title: "Home 1",
   description: "BONE Travel agencija",
 };
 
-// Force dynamic rendering to avoid prerender issues
-export const dynamic = 'force-dynamic';
-
-export default function page() {
-  // Disable static optimization
-  noStore();
-
+export default function Page() {
   return (
     <>
-      <GoogleMapsScript />
-      <Header9 /> 
+      <Script
+        strategy="afterInteractive"
+        src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`}
+      />
+      <Header9 />
       <MobailHeader1 />
       <main className="main">
         <Hero />
